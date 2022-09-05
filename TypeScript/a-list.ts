@@ -2,8 +2,8 @@
 
 class ListItem<T> {
   public data: T;
-  public prev: ListItem<T>;
-  public next: ListItem<T>;
+  public prev: ListItem<T> | null;
+  public next: ListItem<T> | null;
 
   constructor(data: T) {
     this.data = data;
@@ -13,8 +13,8 @@ class ListItem<T> {
 }
 
 class List<T> {
-  public head: ListItem<T>;
-  public tail: ListItem<T>;
+  public head: ListItem<T> | null;
+  public tail: ListItem<T> | null;
 
   constructor() {
     this.head = null;
@@ -27,7 +27,7 @@ class List<T> {
       this.head = item;
     } else {
       item.prev = this.tail;
-      this.tail.next = item;
+      if (this.tail) this.tail.next = item;
     }
     this.tail = item;
   }
