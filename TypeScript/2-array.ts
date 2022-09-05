@@ -1,5 +1,5 @@
 function reverse<T>(array: T[]): T[] {
-  const res = [];
+  const res = <T[]>[];
   for (const item of array) res.unshift(item);
   return res;
 }
