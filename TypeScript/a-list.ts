@@ -46,5 +46,7 @@ class List<T> {
 const list = new List<string>();
 list.push('Ave');
 list.push('Emperor');
+//list.push(new List<number>());
 list.push('Marcus Aurelius!');
+//list.push(1);
 list.display();

@@ -2,7 +2,7 @@ interface Dated {
   year: number;
 }
 
-function later<T1 extends Dated, T2 extends Dated>(a: T1, b: T2): Dated {
+function later(a: Dated, b: Dated) {
   if (b.year > a.year) return b;
   return a;
 }
