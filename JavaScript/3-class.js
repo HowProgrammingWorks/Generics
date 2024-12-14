@@ -8,9 +8,10 @@ class Container {
       configurable: false,
       enumerable: false,
       writable: false,
-      value
+      value,
     });
   }
+
   getValue() {
     return this[containerValue];
   }
