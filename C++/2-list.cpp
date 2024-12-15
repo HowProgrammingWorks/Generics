@@ -13,7 +13,7 @@ class List {
     ListItem<T>* head;
     ListItem<T>* tail;
   public:
-    List<T>() {
+    List() {
       head = NULL;
       tail = NULL;
     };
@@ -35,6 +35,14 @@ class List {
       while (current != NULL) {
         std::cout << current->data << '\n';
         current = current->next;
+      }
+    }
+
+    ~List() {
+      while (head) {
+        ListItem<T> *current = head;
+        head = head->next;
+        delete current;
       }
     }
 };
