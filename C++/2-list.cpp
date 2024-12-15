@@ -13,7 +13,7 @@ class List {
     ListItem<T>* head;
     ListItem<T>* tail;
   public:
-    List<T>() {
+    List() {
       head = NULL;
       tail = NULL;
     };
