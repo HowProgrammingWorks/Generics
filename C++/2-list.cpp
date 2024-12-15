@@ -37,6 +37,14 @@ class List {
         current = current->next;
       }
     }
+
+    ~List() {
+      while (head) {
+        ListItem<T> *current = head;
+        head = head->next;
+        delete current;
+      }
+    }
 };
 
 int main() {
